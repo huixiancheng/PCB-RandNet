@@ -119,7 +119,11 @@ main_poss.py                Use to count distance distribution
 
 - All our experiments were trained on a single NVIDIA RTX 3090 GPU using mixed precision.
 - We set `torch.backends.cudnn.enabled = False` and use `with torch.cuda.amp.autocast():` to reduce training time and save GPU memory. However, it is not certain whether it will have an impact on performance.
-- In `train_SemanticKITTI.py`, We use `num_classes = 20` instead of `num_classes = 19`. The reason is that I think the ops used to calculate the loss in the original code is very complex, and its main point is to ignore the loss when `label == 0`. Therefore, I just changed the class number to 20 and set the weight of `label == 0` to 0 to achieve it.
+- In `train_SemanticKITTI.py`, We use `num_classes = 20` instead of `num_classes = 19`. The reason is that I think the ops used to calculate the loss in the original code is very complex, and its main point is to ignore the loss when `label == 0`. Therefore, I just changed the num_classes to 20 and set the weight of `label == 0` to 0 to achieve it.
+- In fact, the criterion corresponding to `compute_loss` should be `self.criterion = nn.CrossEntropyLoss(weight=class_weights, reduction='none')` instead of `self.criterion = nn.CrossEntropyLoss(weight=class_weights)`. This may affect the scale of the computed loss, but should not affect performance.
+- There are two ways to calculate SCL, one is the L1 loss used by default, and the other is method here from CPGNET.
+- In terms of loss size, the default L1 loss is better used with `reduction='mean'` and `consistency_loss_l1` is better used with `reduction='none'`. Some of our experimental results show that the performance of the models trained in both settings is comparable.
+- Since the two losses used Lce and Lscl may be correlated. Therefore the uncertainty weighting method may not converge using random initialization. In our experiments, we set `ce_sigma==0.27` and `l1_sigma==0.62` because they are close to our initial experimental values with `seed==1024`. Some of our experiments show that the model converges effectively with `ce_sigma in range [0.2, 0.3]` and `l1_sigma in range [0.6, 0.8]`.
 - 
 
 ## Acknowledgement

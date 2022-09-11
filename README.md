@@ -15,14 +15,16 @@ Fast and efficient semantic segmentation of large-scale LiDAR point clouds is a 
 
 
 ## Environment Setup
-- Install python packages
+Install python packages
 ```
 conda env create -f my_env.yaml
 conda activate randla
 ```
-Note: Not all packages are necessary, you can refer to this environment to install.
-- Compile C++ Wrappers
+Note: 
+- Not all packages are necessary, you can refer to this environment to install.
+- Since we are using operator `torch.take_along_dim` that are only available in pytorch version ≥ 1.9.0 in [here](https://github.com/huixiancheng/PCB-RandNet/blob/3d05d457761f5f096263b9658940bc7d01ce04eb/train_both_SemanticKITTI.py#L170), please make sure that the installed version meets the requirements.
 
+Compile C++ Wrappers
 ```
 bash compile_op.sh
 ```
@@ -37,7 +39,7 @@ python data_prepare_semanticposs.py
 ```
 Note: 
 - Please change the data path with your own path.
-- Change corresponding path in all .py in dataset (such as ).
+- Change corresponding path `self.dataset_path` in all `.py` in dataset (such as [here](https://github.com/huixiancheng/PCB-RandNet/blob/3d05d457761f5f096263b9658940bc7d01ce04eb/dataset/semkitti_trainset.py#L32)).
 
 ## Training
 
@@ -71,7 +73,7 @@ python train_both_SemanticPOSS.py <args>
 Options:  Similar to before.
 ```
 
-## Testing
+## Test
 
 ```
 python test_SemanticKITTI.py <args>
@@ -88,9 +90,10 @@ Options:
 --step               set length of dataset: 0 mean use all data || 4 mean use 1/4 dataset (Only use for SemanticKITTI)
 --grid               resolution of polar cylinder
 ```
-**Note: For SemanticKITTI dataset, if your want to infer all data of 08 sequence, please make sure you have more than 32G of free RAM.**
+**Note:** 
+- **For SemanticKITTI dataset, if your want to infer all data of 08 sequence, please make sure you have more than 32G of free RAM.**
 
-**Also, Due to the use of torch_data.IterableDataset, it is not possible to fully use multi-threads when testing, so the test will be very slow. Welcome to propose a feasible accelerated PR for this. (This [reference](https://medium.com/speechmatics/how-to-build-a-streaming-dataloader-with-pytorch-a66dd891d9dd) may be useful)**
+- **Due to the use of `torch_data.IterableDataset`, the num_workers needs to be set to 0 and cannot use multi-threaded acceleration, so the test speed will be very slow. Welcome to propose a feasible accelerated PR for this. (This [reference](https://medium.com/speechmatics/how-to-build-a-streaming-dataloader-with-pytorch-a66dd891d9dd) may be useful)**
 
 ## Other Utils
 1. Evaluation with Distances
@@ -101,7 +104,7 @@ python evaluate_DIS_SemanticKITTI.py <args>     ||      python evaluate_DIS_Sema
 ```
 python visualize_SemanticKITTI.py <args>
 ```
-Not use this part, so not test, maybe have bugs.
+This code is not used, so it has not been tested and may have bugs. If you want to use this code to visualize SemanticKITTI and SemanticPOSS, please refer to [this repo](https://github.com/PRBonn/semantic-kitti-api) and [this repo](https://github.com/huixiancheng/CENet).
 
 3. Others in tool.
 ```
@@ -111,6 +114,13 @@ draw_vis_compare.py         Use to generate qualitative visualization and quanti
 eval_KITTI_gap.py           Use to calculate the difference in performance of the model under different sampling methods.
 main_poss.py                Use to count distance distribution
 ```
+
+## Others to Note and Clarify
+
+- All our experiments were trained on a single NVIDIA RTX 3090 GPU using mixed precision.
+- We set `torch.backends.cudnn.enabled = False` and use `with torch.cuda.amp.autocast():` to reduce training time and save GPU memory. However, it is not certain whether it will have an impact on performance.
+- In `train_SemanticKITTI.py`, We use `num_classes = 20` instead of `num_classes = 19`. The reason is that I think the ops used to calculate the loss in the original code is very complex, and its main point is to ignore the loss when `label == 0`. Therefore, I just changed the class number to 20 and set the weight of `label == 0` to 0 to achieve it.
+- 
 
 ## Acknowledgement
 

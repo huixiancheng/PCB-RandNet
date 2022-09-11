@@ -36,6 +36,6 @@ plt.legend()
 fig.set_size_inches(8, 6, forward=True)
 fig.tight_layout()
 
-plt.savefig("distance.png") #, bbox_inches='tight'
+plt.savefig("distance_poss.png") #, bbox_inches='tight'
 plt.show()
 plt.close()

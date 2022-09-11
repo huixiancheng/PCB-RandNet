@@ -36,8 +36,7 @@ for seq in sequences:
 # sort for correspondance
 lidar_list.sort()
 
-
-# bound = np.arange(-5, 10, 0.5)
+# bound = np.arange(0, 20)
 bound = np.arange(0, 200)
 DISTANCES = np.append(bound, [200, 10**3])
 numbers = [0]*(len(DISTANCES)-1)

@@ -22,7 +22,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = '0'
 warnings.filterwarnings("ignore")
 parser = argparse.ArgumentParser()
 parser.add_argument('--backbone', type=str, default='randla', choices=['randla', 'baflac', 'baaf'])
-parser.add_argument('--checkpoint_path', default='save_semantic/simple/polar_sum_seed_1024/checkpoint-best.tar', help='Model checkpoint path [default: None]')
+parser.add_argument('--checkpoint_path', default=None, help='Model checkpoint path [default: None]')
 parser.add_argument('--log_dir', type=str, default='GAP+TEST', help='Dump dir to save model checkpoint [default: log]')
 parser.add_argument('--val_batch_size', type=int, default=1, help='Batch Size during training [default: 30]')
 parser.add_argument('--num_workers', type=int, default=0, help='Number of workers [default: 5]')

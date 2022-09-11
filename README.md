@@ -1,18 +1,42 @@
-# PCB-RandNet: Rethinking Random Sampling for LIDAR Semantic Segmentation in Autonomous Driving Scene
+[comment]: <> (# PCB-RandNet: Rethinking Random Sampling for LIDAR Semantic Segmentation in Autonomous Driving Scene)
 
 
-Code for paper:
-> **PCB-RandNet: Rethinking Random Sampling for LIDAR Semantic Segmentation in Autonomous Driving Scene**
-> <br>Huixian Cheng, Xianfeng Han, Guoqiang Xiao<br>
-> Hope to be accepted by ~~AAAI 2023~~
+[comment]: <> (Code for paper:)
 
-<div align="center">
-  <img src="assert/ppl.png"/>
-</div><br/>
+[comment]: <> (> **PCB-RandNet: Rethinking Random Sampling for LIDAR Semantic Segmentation in Autonomous Driving Scene**)
+
+[comment]: <> (> <br>Huixian Cheng, Xianfeng Han, Guoqiang Xiao<br>)
+
+[comment]: <> (> Hope to be accepted by ~~AAAI 2023~~)
+
+[comment]: <> (<div align="center">)
+
+[comment]: <> (  <img src="assert/ppl.png"/>)
+
+[comment]: <> (</div><br/>)
+
+
+<br />
+<p align="center">
+  <h3 align="center"><strong>PCB-RandNet: Rethinking Random Sampling for LIDAR Semantic Segmentation in Autonomous Driving Scene</strong></h3>
+  <p align="center">
+      <a href="https://scholar.google.com/citations?user=L39a9d8AAAAJ" target='_blank'>Huixian Cheng</a>,&nbsp;
+      <a href="https://scholar.google.com/citations?user=4FaCTFgAAAAJ" target='_blank'>Xianfeng Han</a>,&nbsp;
+      Hang Jiang, Dehong He, Guoqiang Xiao
+    <br>
+  College of Computer and Information Science, Southwest University
+  </p>
+
+<h3 align="center">
+  [arXiv]
+</h3>
 
 ## Abstract
 Fast and efficient semantic segmentation of large-scale LiDAR point clouds is a fundamental problem in autonomous driving. To achieve this goal, the existing point-based methods mainly choose to adopt Random Sampling strategy to process large-scale point clouds. However, our quantative and qualitative studies have found that Random Sampling may be less suitable for the autonomous driving scenario, since the LiDAR points follow an uneven or even long-tailed distribution across the space, which prevents the model from capturing sufficient information from points in different distance ranges and reduces the model's learning capability. To alleviate this problem, we propose a new Polar Cylinder Balanced Random Sampling method that enables the downsampled point clouds to maintain a more balanced distribution and improve the segmentation performance under different spatial distributions. In addition, a sampling consistency loss is introduced to further improve the segmentation performance and reduce the model's variance under different sampling methods. Extensive experiments confirm that our approach produces excellent performance on both SemanticKITTI and SemanticPOSS benchmarks, achieving a 2.8% and 4.0% improvement, respectively.
 
+<div align="center">
+  <img src="assert/ppl.png"/>
+</div><br/>
 
 ## Environment Setup
 Install python packages
@@ -131,3 +155,9 @@ main_poss.py                Use to count distance distribution
 - Original Tensorflow implementation [link](https://github.com/QingyongHu/RandLA-Net)
 - Our network & config codes are modified from [RandLA-Net PyTorch](https://github.com/qiqihaer/RandLA-Net-pytorch)
 - Our evaluation & visualization codes are modified from [SemanticKITTI API](https://github.com/PRBonn/semantic-kitti-api)
+
+## Citation
+If you find this work helpful, please kindly consider citing our paper:
+~~~
+Soon
+~~~

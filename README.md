@@ -164,7 +164,7 @@ main_poss.py                Use to count distance distribution
 [AutomaticWeightedLoss](https://github.com/Mikoto10032/AutomaticWeightedLoss), [MINet](https://github.com/sj-li/MINet). Thanks a lot for their open source code. :heart:
 - Thanks to PhD. Qiu, PhD. Li for the code help on BAAF-Net and CPGNet in the email. :heart:
 - Thanks for the answers provided in this stackoverflow [question](https://stackoverflow.com/questions/42232540/how-to-find-indices-of-a-reordered-numpy-array).
-- The paper was inspired by a discussion with RandLA-Net authors at China3DV in Xiamen in June 2021, thanks the insightful comments and feedback from [PhD. Hu](https://github.com/QingyongHu).
+- The paper was inspired by a helpful discussion with RandLA-Net authors at China3DV in Xiamen in June 2021, thanks the insightful comments and feedback from [PhD. Hu](https://github.com/QingyongHu). :heart:
 
 
 ## Citation

@@ -1,22 +1,3 @@
-[comment]: <> (# PCB-RandNet: Rethinking Random Sampling for LIDAR Semantic Segmentation in Autonomous Driving Scene)
-
-
-[comment]: <> (Code for paper:)
-
-[comment]: <> (> **PCB-RandNet: Rethinking Random Sampling for LIDAR Semantic Segmentation in Autonomous Driving Scene**)
-
-[comment]: <> (> <br>Huixian Cheng, Xianfeng Han, Guoqiang Xiao<br>)
-
-[comment]: <> (> Hope to be accepted by ~~AAAI 2023~~)
-
-[comment]: <> (<div align="center">)
-
-[comment]: <> (  <img src="assert/ppl.png"/>)
-
-[comment]: <> (</div><br/>)
-
-
-<br />
 <p align="center">
   <h2 align="center"><strong>PCB-RandNet: Rethinking Random Sampling for LIDAR Semantic Segmentation in Autonomous Driving Scene</strong></h2>
   <p align="center">

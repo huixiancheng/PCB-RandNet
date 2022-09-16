@@ -135,6 +135,9 @@ main_poss.py                Use to count distance distribution
 - For BAAF backbone, our implementation is slightly different from the [original Repo](https://github.com/ShiQiu0419/BAAF-Net), which will result in some performance differences. While the original Repo used FPS sampling, I changed to RS sampling to keep the framework structure consistent. The original Repo used an auxiliary loss, in order to keep simple, we did not use this part.
 - Since I' m not good at coding & optimization, the code of [PCB-RS](https://github.com/huixiancheng/PCB-RandNet/blob/05f2d4c796ac68d45745ddea2b7d0119c43cc0a5/dataset/semkitti_trainset.py#L130-L230) is very rough, if you are interesting in optimizing & accelerating this part, welcome to PR !
 
+## Pretrained Models and Logs:
+Soon
+
 ## Acknowledgement
 - This repo is heavily based on [RandLA-Net-pytorch](https://github.com/tsunghan-wu/RandLA-Net-pytorch), many thanks to the author for the excellent Pytorch reproduction. :thumbsup:
 - Our code refers in varying degrees to the Repos listed below: [RandLA-Net](https://github.com/QingyongHu/RandLA-Net), 

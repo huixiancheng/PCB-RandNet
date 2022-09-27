@@ -61,13 +61,13 @@ Options:
 --backbone           select the backbone to be used: choices=['randla', 'baflac', 'baaf']
 --checkpoint_path    path to pretrained models(if any), otherwise train from start
 --log_dir            Name of the log dir
---max_epoch          max epoch for the model to run, default 80
+--max_epoch          max epoch for the model to run
 --batch_size         training batch size, modify to full utilize the GPU/s
 --val_batch_size     batch size for validation
 --num_workers        number of workers for I/O
 --sampling           select the sampling way: RS or PCB-RS. choices=['random', 'polar']
 --seed               set random seed
---step               set length of dataset: 0 mean use all data || 4 mean use 1/4 dataset
+--step               set length of dataset: 0 mean use all data || 4 mean use 1/4 dataset (Only use for SemanticKITTI)
 --grid               resolution of polar cylinder
 ```
 

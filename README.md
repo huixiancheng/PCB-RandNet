@@ -98,7 +98,7 @@ Options:
 --grid               resolution of polar cylinder
 ```
 **Note:** 
-- **For SemanticKITTI dataset, if your want to infer all data of 08 sequence, please make sure you have more than 32G of free RAM. If your hardware does not meet this requirement, please refer to this [issue](https://github.com/tsunghan-wu/RandLA-Net-pytorch/issues/10)** 
+- **For SemanticKITTI dataset, if your want to infer all data of 08 sequence, please make sure you have more than 32G of free RAM. If your hardware does not meet this requirement, please refer to this [issue](https://github.com/tsunghan-wu/RandLA-Net-pytorch/issues/10).** 
 
 - **Due to the use of `torch_data.IterableDataset`, the num_workers needs to be set to 0 and cannot use multi-threaded acceleration, so the test speed will be very slow. Welcome to propose a feasible accelerated PR for this. (This [reference](https://medium.com/speechmatics/how-to-build-a-streaming-dataloader-with-pytorch-a66dd891d9dd) may be useful)**
 

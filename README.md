@@ -62,8 +62,8 @@ Options:
 --checkpoint_path    path to pretrained models(if any), otherwise train from start
 --log_dir            Name of the log dir
 --max_epoch          max epoch for the model to run, default 80
---batch_size         training batch size, default 6 (indicated in oroginal implementation), modify to full utilize the GPU/s
---val_batch_size     batch size for validation, default 30
+--batch_size         training batch size, modify to full utilize the GPU/s
+--val_batch_size     batch size for validation
 --num_workers        number of workers for I/O
 --sampling           select the sampling way: RS or PCB-RS. choices=['random', 'polar']
 --seed               set random seed
@@ -136,10 +136,13 @@ main_poss.py                Use to count distance distribution
 - Since I' m not good at coding & optimization, the code of [PCB-RS](https://github.com/huixiancheng/PCB-RandNet/blob/05f2d4c796ac68d45745ddea2b7d0119c43cc0a5/dataset/semkitti_trainset.py#L130-L230) is very rough, if you are interesting in optimizing & accelerating this part, welcome to PR !
 
 ## Pretrained Models and Logs:
-Soon
+| **KITTI Result** | **POSS Result** | **Ablation Study** |
+| ---------------- | --------------- | ------------------ |
+| [Google Drive](https://drive.google.com/drive/folders/1cWHgWbXgPN-33y1k1CIIH2vxyt_NdW3P?usp=sharing) | [Google Drive](https://drive.google.com/drive/folders/13-RdlHdVM7-kVaH3hS8eAaTL7F139itF?usp=sharing) | [Google Drive](https://drive.google.com/drive/folders/1rVvV7lu7luEM2gUzTyXaaqCeXi7rqffy?usp=sharing)
 
 ## Acknowledgement
 - This repo is heavily based on [RandLA-Net-pytorch](https://github.com/tsunghan-wu/RandLA-Net-pytorch), many thanks to the author for the excellent Pytorch reproduction. :thumbsup:
+- If you are looking for a better performance reproduction of RandLA-Net, please refer to this [Repo](https://github.com/charlesChen02/RandLA-pytorch).
 - Our code refers in varying degrees to the Repos listed below: [RandLA-Net](https://github.com/QingyongHu/RandLA-Net), 
 [BAAF-Net](https://github.com/ShiQiu0419/BAAF-Net), 
 [BAF-LAC](https://github.com/Xiangxu-0103/BAF-LAC), [PolarNet](https://github.com/edwardzhou130/PolarSeg), 

@@ -152,7 +152,7 @@ main_poss.py                Use to count distance distribution
 [Cylinder3D](https://github.com/xinge008/Cylinder3D), [R-Drop](https://github.com/dropreg/R-Drop),
 [JS3C-Net](https://github.com/yanx27/JS3C-Net), [Pointnet_Pointnet2_pytorch](https://github.com/yanx27/Pointnet_Pointnet2_pytorch),
 [AutomaticWeightedLoss](https://github.com/Mikoto10032/AutomaticWeightedLoss), [MINet](https://github.com/sj-li/MINet). Thanks a lot for their open source code. :heart:
-- Thanks to PhD. Qiu & PhD. Li for the code help on BAAF-Net and CPGNet in the email. :heart:
+- Thanks to PhD. Qiu & PhD. Li for the code help on [BAAF-Net](https://github.com/ShiQiu0419/BAAF-Net) and [CPGNet](https://arxiv.org/abs/2204.09914) in the email. :heart:
 - Thanks for the answers provided in this stackoverflow [question](https://stackoverflow.com/questions/42232540/how-to-find-indices-of-a-reordered-numpy-array).
 - The paper was inspired by a helpful discussion with RandLA-Net authors at China3DV in Xiamen in June 2021, thanks the insightful comments and feedback from [PhD. Hu](https://github.com/QingyongHu). :heart:
 

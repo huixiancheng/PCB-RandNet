@@ -9,7 +9,7 @@
   </p>
 
 <h4 align="center">
-  [arXiv]
+  <a href="https://arxiv.org/abs/2209.13797">[arXiv]</a>
 </h4>
 
 <div align="center">

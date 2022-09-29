@@ -5,12 +5,15 @@
       <a href="https://scholar.google.com/citations?user=4FaCTFgAAAAJ" target='_blank'>Xianfeng Han</a>,&nbsp;
       Hang Jiang, Dehong He, Guoqiang Xiao
     <br>
-  College of Computer and Information Science, Southwest University
+  College of Computer and Information Science, Southwest University<br>
+  <a href="https://arxiv.org/abs/2209.13797">[arXiv]</a>
   </p>
 
-<h4 align="center">
-  <a href="https://arxiv.org/abs/2209.13797">[arXiv]</a>
-</h4>
+[comment]: <> (<h4 align="center">)
+
+[comment]: <> (  <a href="https://arxiv.org/abs/2209.13797">[arXiv]</a>)
+
+[comment]: <> (</h4>)
 
 <div align="center">
   <img src="assert/ppl.png"/>

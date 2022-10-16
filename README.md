@@ -160,5 +160,10 @@ main_poss.py                Use to count distance distribution
 ## Citation
 If you find this work helpful, please consider citing our paper:
 ~~~
-Soon
+@article{cheng2022pcb,
+  title={PCB-RandNet: Rethinking Random Sampling for LIDAR Semantic Segmentation in Autonomous Driving Scene},
+  author={Cheng, Huixian and Han, XianFeng and Jiang, Hang and He, Dehong and Xiao, Guoqiang},
+  journal={arXiv preprint arXiv:2209.13797},
+  year={2022}
+}
 ~~~

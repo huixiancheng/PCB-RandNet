@@ -1,5 +1,5 @@
 <p align="center">
-  <h2 align="center"><strong>PCB-RandNet: Rethinking Random Sampling for LIDAR Semantic Segmentation in Autonomous Driving Scene</strong></h2>
+  <h2 align="center"><strong>PCB-RandNet: Rethinking Random Sampling for LiDAR Semantic Segmentation in Autonomous Driving Scene</strong></h2>
   <p align="center">
       <a href="https://scholar.google.com/citations?user=L39a9d8AAAAJ" target='_blank'>Huixian Cheng</a>,&nbsp;
       <a href="https://scholar.google.com/citations?user=4FaCTFgAAAAJ" target='_blank'>Xianfeng Han</a>,&nbsp;

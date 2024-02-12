@@ -19,7 +19,8 @@
   <img src="assert/ppl.png"/>
 </div><br/>
 
-**2024-02-12[:yum:]** Our paper was very lucky to be accepted by ICRA 2024.
+## Updates
+- **2024-02-12[😋]** Our paper was very lucky to be accepted by ICRA 2024.
 
 ## Abstract
 LiDAR point cloud sparsity and distance-dependent long-tailed distributions 
